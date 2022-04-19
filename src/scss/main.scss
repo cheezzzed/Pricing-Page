@@ -24,6 +24,8 @@ background: variables.$primary-color;
 */
 
 @use 'reset';
+@use 'variables';
+@use 'mixins';
 
 /* 1. Main Layout ================================= */
 
@@ -32,5 +34,12 @@ background: variables.$primary-color;
 }
 
 body {
+	margin: 0;
 	background: rgb(230, 171, 12);
+	min-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
