@@ -170,7 +170,165 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+.logo {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.logo .fruit {
+  height: 4.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.logo .title {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .logo .title {
+    margin-bottom: 3rem;
+  }
+}
+
+.pricing-plan {
+  justify-content: center;
+  align-items: stretch;
+}
+@media screen and (min-width: 992px) {
+  .pricing-plan {
+    display: flex;
+    width: 100%;
+    margin: 1rem;
+  }
+}
+.pricing-plan .price-column {
+  font-size: 1.3rem;
+  background-color: #fff;
+  box-shadow: 0 7px 30px rgba(52, 31, 97, 0.1);
+  padding: 5rem;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 275px;
+  border-radius: 8px;
+}
+@media screen and (min-width: 992px) {
+  .pricing-plan .price-column {
+    padding: 3rem;
+  }
+}
+.pricing-plan .price-column .price-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+.pricing-plan .price-column .price-header .price {
+  display: flex;
+  font-size: 3.5rem;
+}
+.pricing-plan .price-column .price-header .price .dollar {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-right: 0.25rem;
+}
+.pricing-plan .price-column .price-header .price .per-month {
+  font-size: 0.75rem;
+  align-self: flex-end;
+  margin-bottom: 1.1rem;
+}
+.pricing-plan .price-column .price-header .plan-name {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.pricing-plan .price-column .divider {
+  height: 1px;
+  width: 100%;
+  background-color: #02304762;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.pricing-plan .price-column .features {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  margin: 0.4rem;
+  font-family: "Poppins", sans-serif;
+}
+.pricing-plan .price-column .features img {
+  height: 1em;
+  width: 1em;
+  margin-right: 0.5rem;
+}
+.pricing-plan .price-column .features.inactive {
+  color: #999;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
+.pricing-plan .price-column .button {
+  font-size: 0.7rem;
+  font-weight: 700;
+  border: none;
+  background-color: #219ebc;
+  color: #fff;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  margin-top: 3rem;
+  transition: 0.1s;
+}
+.pricing-plan .price-column .button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+@media screen and (min-width: 992px) {
+  .pricing-plan .price-column:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .pricing-plan .price-column:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+.pricing-plan .price-column.recommended {
+  position: relative;
+  background-color: #023047;
+  color: #fff;
+  box-shadow: 0 7px 30px rgba(52, 31, 97, 0.3);
+}
+@media screen and (min-width: 992px) {
+  .pricing-plan .price-column.recommended {
+    margin-top: -2.5rem;
+    padding-top: 4.5rem;
+    margin-bottom: -2.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
+.pricing-plan .price-column.recommended .most-popular {
+  position: absolute;
+  top: 1.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.pricing-plan .price-column.recommended .divider {
+  background-color: #ffb80371;
+}
+.pricing-plan .price-column.recommended .button {
+  background-color: #ffb703;
+  color: black;
 }
 /*# sourceMappingURL=main.css.map */

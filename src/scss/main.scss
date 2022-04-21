@@ -39,7 +39,197 @@ body {
 	min-width: 100vw;
 	min-height: 100vh;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	font-family: 'Poppins', sans-serif;
+
+	@include mixins.bp-large{
+
+	}
 }
+
+.logo{
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+
+	.fruit{
+		height: 4.5rem;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	.title{
+		font-size: 3rem;
+		margin-top: 1rem;
+		margin-bottom: 2rem;
+
+		@include mixins.bp-large{
+			margin-bottom: 3rem;
+		}
+
+	}
+
+}
+
+.pricing-plan{
+	justify-content: center;
+	align-items: stretch;
+
+	@include mixins.bp-large{
+		display: flex;
+		width: 100%;
+		margin: 1rem;
+	}
+
+	.price-column{
+		font-size: 1.3rem;
+		background-color: variables.$white;
+		box-shadow: 0 7px 30px rgba(52, 31, 97, 0.1);
+		padding: 5rem;
+		flex-grow: 1;
+		flex-basis: 0;
+		max-width: 275px;
+		border-radius: 8px;
+
+		@include mixins.bp-large{
+			padding: 3rem;
+		}
+
+		.price-header{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-family: 'Poppins', sans-serif;
+
+			.price{
+				display: flex;
+				font-size: 3.5rem;
+
+				.dollar{
+					font-size: 1.5rem;
+					margin-top: .5rem;
+					margin-right: .25rem;
+				}
+
+				.per-month{
+					font-size: .75rem;
+					align-self: flex-end;
+					margin-bottom: 1.1rem;
+				}
+
+			}
+
+			.plan-name{
+				font-size: .9rem;
+				margin-top: 1rem;
+				margin-bottom: 0;
+			}
+
+		}
+
+		.divider{
+			height: 1px;
+			width: 100%;
+			background-color: variables.$btransparent;
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
+
+		.features{
+			display: flex;
+			align-items: center;
+			font-size: 1rem;
+			padding-bottom: 1rem;
+			margin: .4rem;
+			font-family: 'Poppins', sans-serif;
+		}
+
+		.features img{
+			height: 1em;
+			width: 1em;
+			margin-right: .5rem;
+		}
+
+		.features.inactive{
+			color: variables.$grey;
+			text-decoration-line: line-through;
+		}
+
+		.button{
+			font-size: .7rem;
+			font-weight: 700;
+			border: none;
+			background-color: variables.$babyblue;
+			color: variables.$white;
+			width: 100%;
+			padding: .75rem 1rem;
+			cursor: pointer;
+			font-family: 'Poppins', sans-serif;
+			border-radius: 5px;
+			margin-top: 3rem;
+			transition: .1s;
+		}
+
+		.button:hover{
+			transform: scale(1.1);
+		}
+
+	}
+
+	.price-column:first-child{
+		
+		@include mixins.bp-large{
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+
+	}
+
+	.price-column:last-child{
+
+		@include mixins.bp-large{
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+
+	}
+
+	.price-column.recommended{
+		position: relative;
+		background-color: variables.$blue;
+		color: variables.$white;
+		box-shadow: 0 7px 30px rgba(52, 31, 97, 0.3);
+
+		@include mixins.bp-large{
+			margin-top: -2.5rem;
+			padding-top: 4.5rem;
+			margin-bottom: -2.5rem;
+			padding-bottom: 4.5rem;
+		}
+
+		.most-popular{
+			position: absolute;
+			top: 1.5rem;
+			left: .5rem;
+			right: .5rem;
+			text-align: center;
+			font-family: 'Poppins', sans-serif;
+		}
+
+	}
+
+	.price-column.recommended .divider{
+		background-color: variables.$transparent;
+	}
+
+	.price-column.recommended .button{
+		background-color: variables.$orange;
+		color: black;
+	}
+	
+}
+
+
 
