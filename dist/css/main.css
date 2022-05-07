@@ -175,6 +175,7 @@ body {
   align-items: center;
   font-family: "Poppins", sans-serif;
 }
+
 .logo {
   flex-direction: column;
   display: flex;

@@ -44,15 +44,29 @@ body {
 	align-items: center;
 	font-family: 'Poppins', sans-serif;
 
-	@include mixins.bp-large{
+	
 
-	}
 }
 
 .logo{
 	flex-direction: column;
 	display: flex;
 	align-items: center;
+
+	// animation: logo-banana 3s ease-out 1s;
+	
+	// @keyframes logo-banana{
+
+	// 	0% {
+	// 		transform: translateY(-400%);
+	// 		opacity: 0;
+	// 	}
+
+	// 	100% {
+	// 		transform: translateY(0);
+	// 		opacity: 0.5;
+	// 	}
+	// }
 
 	.fruit{
 		height: 4.5rem;
@@ -76,6 +90,18 @@ body {
 .pricing-plan{
 	justify-content: center;
 	align-items: stretch;
+
+	// animation: pricing-plans 1.5s ease-out;
+	
+	// @keyframes pricing-plans{
+	// 	0% {
+	// 		transform: translateY(-200%);
+	// 	}
+
+	// 	100% {
+	// 		transform: translateY(0);
+	// 	}
+	// }
 
 	@include mixins.bp-large{
 		display: flex;
